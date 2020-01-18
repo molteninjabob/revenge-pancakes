@@ -59,3 +59,9 @@ stack = '++--++--++--++--++--+--+----+-++-+++++---+-++-+-'
 waiter = Waiter.new(stack)
 flips = waiter.rearrange_stack
 puts "#{stack} | Case #12: #{flips}"
+
+stack = '++--++--+-++--++--+-++--++--+-++--++--+-++--++--+-' \
+        '++--++--+-++--++--+-++--++--+-++--++--+-++--++--+-'
+waiter = Waiter.new(stack)
+flips = waiter.rearrange_stack
+puts "#{stack} | Case #13: #{flips}"
