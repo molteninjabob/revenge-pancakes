@@ -1,6 +1,6 @@
 To run code:
 1) Install ruby 2.5.5
-2) gem install bundler
+2) At the command line: `gem install bundler`
 3) At the command line: `bundle install`
 4) At the command line: `ruby main.rb`
 5) To run tests: `rspec test/test_waiter.rb`
