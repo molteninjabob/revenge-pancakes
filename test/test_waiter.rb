@@ -100,6 +100,15 @@ describe Waiter do
         expect(flips).to equal(26)
     end
 
+    it "successfully rearranges if the stack size is equal to 100" do
+        stack = '++--++--+-++--++--+-++--++--+-++--++--+-++--++--+-' \
+        '++--++--+-++--++--+-++--++--+-++--++--+-++--++--+-'
+        waiter = Waiter.new(stack)
+        flips = waiter.rearrange_stack
+        puts "Case #13: #{flips}"
+        expect(flips).to equal(60)
+    end
+
     it "raises an error if the stack size is less than 1" do
         stack = ''
         expect{ Waiter.new(stack) }.to raise_error(RuntimeError)
