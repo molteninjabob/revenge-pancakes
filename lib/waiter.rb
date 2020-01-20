@@ -34,7 +34,7 @@ class Waiter
     attr_reader :stack, :flips
 
     def initialize(stack)
-        raise 'The size of the pancake stack must be between 1 and 100. Please try again.' if stack.length <= 0 || stack.length >= 100
+        raise 'The size of the pancake stack must be between 1 and 100. Please try again.' if stack.length < 1 || stack.length > 100
         raise "Only the characters '+' and '-' are allowed in the stack. Please try again." unless stack.match /\A[+-]*\z/
         @stack = stack
         @flips = 0

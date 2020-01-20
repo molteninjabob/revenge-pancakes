@@ -1,5 +1,6 @@
 require "rspec/autorun"
 require_relative '../lib/waiter'
+require 'byebug'
  
 describe Waiter do
     include RSpec::Matchers
@@ -98,6 +99,15 @@ describe Waiter do
         flips = waiter.rearrange_stack
         puts "Case #12: #{flips}"
         expect(flips).to equal(26)
+    end
+
+    it "successfully rearranges if the stack size is equal to 100" do
+        stack = '++--++--+-++--++--+-++--++--+-++--++--+-++--++--+-' \
+                '++--++--+-++--++--+-++--++--+-++--++--+-++--++--+-'
+        waiter = Waiter.new(stack)
+        flips = waiter.rearrange_stack
+        puts "Case #13: #{flips}"
+        expect(flips).to equal(60)
     end
 
     it "raises an error if the stack size is less than 1" do
